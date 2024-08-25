@@ -1,0 +1,245 @@
+<html>
+    <head>
+<style>
+
+body {
+  background: #ffb700;
+  font: 12px Lucida sans, Arial, Helvetica, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+a {
+  color: #2A679F;
+}
+
+.form-wrapper {
+  background-color: #f6f6f6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: -ms-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: -o-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: linear-gradient(top, #f6f6f6, #eae8e8);
+  border-color: #dedede #bababa #aaa #bababa;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+  -moz-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+  box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+  margin: 100px auto;
+  overflow: hidden;
+  padding: 8px;
+  width: 450px;
+}
+
+.form-wrapper #search {
+  border: 1px solid #CCC;
+  -webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+  -moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+  box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #999;
+  float: left;
+  font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+  height: 40px;
+  padding: 10px;
+  width: 320px;
+}
+
+.form-wrapper #search:focus {
+  border-color: #aaa;
+  -webkit-box-shadow: 0 1px 1px #bbb inset;
+  -moz-box-shadow: 0 1px 1px #bbb inset;
+  box-shadow: 0 1px 1px #bbb inset;
+  outline: 0;
+}
+
+.form-wrapper #search:-moz-placeholder,
+.form-wrapper #search:-ms-input-placeholder,
+.form-wrapper #search::-webkit-input-placeholder {
+  color: #999;
+  font-weight: normal;
+}
+
+.form-wrapper #submit {
+  background-color: #0483a0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#31b2c3), to(#0483a0));
+  background-image: -webkit-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -moz-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -ms-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -o-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: linear-gradient(top, #31b2c3, #0483a0);
+  border: 1px solid #00748f;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+  color: #fafafa;
+  cursor: pointer;
+  height: 42px;
+  float: right;
+  font: 15px Arial, Helvetica;
+  padding: 0;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+  width: 100px;
+}
+
+.form-wrapper #submit:hover,
+.form-wrapper #submit:focus {
+  background-color: #31b2c3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0483a0), to(#31b2c3));
+  background-image: -webkit-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: -moz-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: -ms-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: -o-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: linear-gradient(top, #0483a0, #31b2c3);
+}
+
+.form-wrapper #submit:active {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  outline: 0;
+}
+
+.form-wrapper #submit::-moz-focus-inner {
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --background-color: black;
+  --text-color: hsl(0, 0%, 100%);
+}
+body {
+  margin: 0;
+}
+.wrapper {
+  display: grid;
+  place-content: center;
+  background-color: var(--background-color);
+  min-height: 10vh;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.wrapper > div {
+  grid-area: 1/1/-1/-1;
+}
+.top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+.bottom {
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  color: transparent;
+  background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translateX(-0.02em);
+}
+
+
+</style>
+
+    </head>
+
+    <body>
+
+            <section class="wrapper">
+                    <div class="top">YT MP3</div>
+                    <div class="bottom" aria-hidden="true">YT MP3</div>
+            </section>
+
+        <form class="form-wrapper">
+            <input type="text" id="search" placeholder="PASTE VIDEO URL" required>
+            <input type="button" value="DOWNLOAD" id="submit" onclick="geturl()">
+        </form>
+
+        <script>
+
+            function geturl(){
+                 var url = document.getElementById('search').value;
+                 var urltostring = url.toString();
+                 var ytid = urltostring.split("=");
+                 console.log(ytid[1]);
+
+
+//https://youtu.be/ums8n8tTL6M?si=TosfQPjq0gTvxpHh
+
+                var mobileid = urltostring.split("?")
+                var mobileid1 = mobileid[0].split("/");
+                console.log(mobileid1);
+                
+                
+                var mp3 = async() =>{
+                    
+                    var options = {
+                        method:"GET",
+                        headers:{
+                        "Content-type":"application/json",
+                        "x-rapidapi-host":"youtube-mp36.p.rapidapi.com",
+                        "x-rapidapi-key":"871dece7d0msh4403b53a814977cp1772c5jsna7dd0b545c2f"
+                        }
+                    };
+
+                    
+
+                    try{
+                        var response = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${ytid[1]}` , options);
+                        var data = await response.json();
+                        console.log(data.link);
+                        if(data.link){
+                        var externallink = document.createElement("a");
+                        externallink.setAttribute("href" , data.link);
+                        externallink.click();
+                        document.getElementById('search').value = "";
+                      }else{
+                        console.log("not web link")
+                      }
+                    }catch(error){
+                        console.log(error);
+                    }
+
+                    try{
+                        var response = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${mobileid1[3]}` , options);
+                        var data = await response.json();
+                        console.log(data.link);
+                        if(data.link){
+                        var externallink = document.createElement("a");
+                       externallink.setAttribute("href" , data.link);
+                        externallink.click();
+                        document.getElementById('search').value = "";
+                      }else{
+                        console.log("not mobile link")
+                      }
+                    }catch(error){
+                        console.log(error);
+                    }
+
+                    }
+                    mp3();
+
+                 }
+                    
+
+        </script>
+<P>PROJECT BY SHUBHAM-PHONE NO : 9380847067
+</P>
+    </body>
+
+</html>
